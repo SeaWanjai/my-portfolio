@@ -1,0 +1,194 @@
+/* Reset & Basic Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.profile-img {
+    margin-bottom: 1.5rem;
+}
+
+.profile-img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4da6ff;
+    box-shadow: 0 0 20px rgba(77, 166, 255, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.profile-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Main Profile Box */
+.profile-card {
+    background-color: #000000;
+    /* Transparent background */
+    border: 3px solid rgb(255, 255, 255);
+    /* White frame */
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow:
+        0 20px 40px rgba(69, 87, 105, 0.3),
+        0 0 30px rgba(0, 43, 86, 0.4);
+    transition: all 0.3s ease;
+    /* Subtle white glow */
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #4da6ff;
+    /* Light Blue */
+    text-shadow: 0 0 5px rgba(77, 166, 255, 0.5);
+}
+
+h2 {
+    font-size: 1rem;
+    color: white;
+    /* White */
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Three Option Buttons */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: block;
+    background-color: transparent;
+    color: #4da6ff;
+    /* Blue Text */
+    border: 2px solid white;
+    /* White Border */
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: #4da6ff;
+    color: black;
+    border-color: #4da6ff;
+    box-shadow: 0 0 15px rgba(77, 166, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Social Section */
+.social {
+    margin-top: 1rem;
+}
+
+.social p {
+    font-size: 0.9rem;
+    color: #aeaeae;
+    margin-bottom: 0.8rem;
+}
+
+.github-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #4da6ff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #4da6ff;
+    color: black;
+    box-shadow: 0 0 10px #4da6ff;
+}
+
+/* Footer Contact */
+.contact-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Back Button for sub-pages */
+.back-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+/* Content Area for sub-pages */
+.content-area {
+    text-align: left;
+    color: white;
+    line-height: 1.6;
+}
+
+.content-area h3 {
+    color: #4da6ff;
+    border-bottom: 1px solid #4da6ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 2rem 1.5rem;
+        border-width: 2px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
